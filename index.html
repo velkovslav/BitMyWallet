@@ -10,9 +10,10 @@
 <body>
 <h1>BitMyWallet</h1>
 <p>Check the value of your desired cryptocurrency</p>
+<form action="/">
 
 <!--Cryptocurrency Selection-->
-<select>
+<select name="crypto">
     <option value="BTC">Bitcoin</option>
     <option value="ETC">Etherum</option>
     <option value="LTC">Lite Coin</option>
@@ -20,12 +21,17 @@
 </select>
 
 <!--Currency Selection-->
-<select>
+<select name="currency">
     <option value="MKD">Macedonian Denar</option>
     <option value="EUR">Euro</option>
     <option value="USD">US Dollar</option>
     <option value="GBP">British Pound</option>
 </select>
+
+    <button>Submit</button>
+
+</form>
+
 
 </body>
 </html>
