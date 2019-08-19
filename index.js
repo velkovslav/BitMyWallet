@@ -22,10 +22,8 @@ app.post("/",function(req,res){
 
     request(baseUrl + crypto + currency, function (error, response, body){
         data = JSON.parse(body);
-        hour = data.changes.price.week;
-        res.send('<h1>' + hour + '</h1>');
-
-
+        currentPrice = Math.round(data.ask);
+        res.send('<h1>' + currentPrice + ' ' + currency + '</h1>');
     });
 
 
