@@ -1,6 +1,7 @@
 // Packages
 const express = require('express');
 const bodyParser = require('body-parser');
+const request = require('request');
 // End of Packages
 
 const app = express();
@@ -13,10 +14,23 @@ app.get("/", function(req,res){
 
 // Get the variables form the converter form
 app.post("/",function(req,res){
-    var crypto = req.body.crypto;
-    var currency = req.body.currency;
-    res.send('You have choosen ' + crypto + ' to be converted in ' + currency);
-    console.log(crypto);
+    var crypto = req.body.crypto; //Example output BTC
+    var currency = req.body.currency; //Example output USD
+
+    // Start of API Request for crypto conversion
+    var baseUrl = 'https://apiv2.bitcoinaverage.com/indices/global/ticker/';
+
+    request(baseUrl + crypto + currency, function (error, response, body){
+        data = JSON.parse(body);
+        hour = data.changes.price.week;
+        res.send('<h1>' + hour + '</h1>');
+
+
+    });
+
+
+
+
 });
 
 // Start the server
