@@ -5,6 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Local Bootstrap Stylesheet-->
+    <link rel="stylesheet" href="static/css/bootstrap/css/bootstrap.css">
+    <!--Custom Style Stylesheet-->
+    <link rel="stylesheet" href="/static/css/style.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,28 +16,29 @@
 <p>Check the value of your desired cryptocurrency</p>
 <form action="/" method="post">
 
-<!--Cryptocurrency Selection-->
-<select name="crypto">
-    <option value="BTC">Bitcoin</option>
-    <option value="ETC">Etherum</option>
-    <option value="LTC">Lite Coin</option>
-    <option value="XRP">Ripple</option>
-</select>
+    <!--Cryptocurrency Selection-->
+    <select name="crypto">
+        <option value="BTC">Bitcoin</option>
+        <option value="ETC">Etherum</option>
+        <option value="LTC">Lite Coin</option>
+        <option value="XRP">Ripple</option>
+    </select>
 
-<!--Currency Selection-->
-<select name="currency">
-    <option value="MKD">Macedonian Denar</option>
-    <option value="EUR">Euro</option>
-    <option value="USD">US Dollar</option>
-    <option value="GBP">British Pound</option>
-</select>
+    <!--Currency Selection-->
+    <select name="currency">
+        <option value="MKD">Macedonian Denar</option>
+        <option value="EUR">Euro</option>
+        <option value="USD">US Dollar</option>
+        <option value="GBP">British Pound</option>
+    </select>
 
-    <input type="number" name="amount" placeholder="Amount">;
+    <input type="number" name="amount" placeholder="Amount">
 
     <button type="submit">Submit</button>
 
 </form>
-
-
+<!--Bootstrap Javascript Dependencies-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 </body>
 </html>
