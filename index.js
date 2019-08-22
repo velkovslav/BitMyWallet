@@ -7,6 +7,8 @@ const request = require('request');
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 
+// Connect with the static files
+app.use('/static',express.static(__dirname + "/static"));
 // Get the root index.html file
 app.get("/", function(req,res){
     res.sendFile(__dirname + "/index.html");
