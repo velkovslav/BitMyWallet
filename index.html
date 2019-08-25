@@ -7,7 +7,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Google Fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,900&display=swap&subset=cyrillic,cyrillic-ext"
+          rel="stylesheet">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--Local Bootstrap Stylesheet-->
@@ -17,51 +18,51 @@
     <title>Document</title>
 </head>
 <body>
+<!--Background Video-->
+<video id="myVideo" autoplay loop>
+    <source src="static/video/bitcoin.mp4" type="video/mp4">
+<!--    <source src="movie.ogg" type="video/ogg">-->
+    Your browser does not support the video tag.
+</video>
+
 <div class="row">
     <div class="col-12 text-center">
         <h1>BitMyWallet</h1>
         <p>Check the value of your desired cryptocurrency</p>
     </div>
 </div>
-    <!--Cryptocurrency Selection-->
+<!--Cryptocurrency Selection-->
 
 
-            <form action="/" method="post">
-             <div class="row text-center" >
-                 <div class="col-12">
-                <label for="crypto"><i class="fa fa-arrow-down"></i></label>
-                <select id="crypto" name="crypto">
-                    <option value="BTC">Bitcoin</option>
-                    <option value="ETC">Etherum</option>
-                    <option value="LTC">Lite Coin</option>
-                    <option value="XRP">Ripple</option>
-                </select>
+<form action="/" method="post">
+    <div class="row text-center">
+        <div class="col-12">
+            <label for="crypto"><i class="fa fa-arrow-down"></i></label>
+            <select id="crypto" name="crypto">
+                <option value="BTC">Bitcoin</option>
+                <option value="ETC">Etherum</option>
+                <option value="LTC">Lite Coin</option>
+                <option value="XRP">Ripple</option>
+            </select>
 
 
-                <!--Currency Selection-->
+            <!--Currency Selection-->
 
-                <label for="currency"><i class="fa fa-arrow-down"></i></label>
-                <select id="currency" name="currency">
-                    <option value="MKD">Macedonian Denar</option>
-                    <option value="EUR">Euro</option>
-                    <option value="USD">US Dollar</option>
-                    <option value="GBP">British Pound</option>
-                </select>
-                <input type="number" name="amount" placeholder="Amount" required>
-</div>
+            <label for="currency"><i class="fa fa-arrow-down"></i></label>
+            <select id="currency" name="currency">
+                <option value="MKD">Macedonian Denar</option>
+                <option value="EUR">Euro</option>
+                <option value="USD">US Dollar</option>
+                <option value="GBP">British Pound</option>
+            </select>
+            <input type="number" name="amount" placeholder="Amount" required>
+        </div>
 
-<div class="col-12">
-                <button class="btn btn-primary" type="submit">Submit</button>
-</div>
-             </div>
-            </form>
-
-
-
-
-
-
-
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
 
 
 <!--Bootstrap Javascript Dependencies-->
@@ -71,5 +72,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -1,17 +1,28 @@
 body {
     background-color: #65d38c;
+    color: white;
 }
 
 /*Input Field Styles*/
 /*Notice: The current parameters are set for all input fields, be aware...*/
 select, input {
-    background-color: white;
+    background-color: rgba(0,0,0, 0.2);
     border: 0px solid green;
-    border-radius: 2rem;
-    min-height: 50px;
+    border-radius: 15px;
+    min-height: 69px;
     padding: 0 3rem;
     box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.4);
     -webkit-appearance: none;
+
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    filter: blur(20px);
 }
 
 .row:first-child div {
