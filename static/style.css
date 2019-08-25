@@ -3,7 +3,8 @@ body {
 }
 
 /*Input Field Styles*/
-select {
+/*Notice: The current parameters are set for all input fields, be aware...*/
+select, input {
     background-color: white;
     border: 0px solid green;
     border-radius: 2rem;
@@ -11,6 +12,10 @@ select {
     padding: 0 3rem;
     box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.4);
     -webkit-appearance: none;
+}
+
+.row:first-child div {
+    margin: 0 0 20px;
 }
 
 .div-rel {
