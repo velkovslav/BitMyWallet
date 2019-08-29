@@ -1,18 +1,38 @@
 body {
     background-color: #65d38c;
     color: white;
+    font-family: "Roboto Light";
 }
 
+header {
+    margin: 50px 0 0 0;
+}
+
+header h1 span {
+font-weight: 900;
+}
 /*Input Field Styles*/
+
+
+::placeholder {
+    color: white;
+    text-align: center;
+}
 /*Notice: The current parameters are set for all input fields, be aware...*/
 select, input {
-    background-color: rgba(0,0,0, 0.2);
+    background-color: rgba(0,0,0, 0.6);
     border: 0px solid green;
     border-radius: 15px;
     min-height: 69px;
     padding: 0 3rem;
     box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.4);
     -webkit-appearance: none;
+    color: white;
+    outline: none;
+}
+
+select option {
+    background-color: red;
 
 }
 
@@ -22,7 +42,7 @@ select, input {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    filter: blur(20px);
+    filter: blur(5px) brightness(20%);
 }
 
 .row:first-child div {
@@ -38,18 +58,20 @@ select, input {
     right: 0;
 }
 
-label[for="crypto"] i.fa-arrow-down{
+label[for="crypto"] i.fa-caret-down{
     position:relative;
     display: block;
-    color: black;
     left: 150px;
+    font-size: 20px;
+    color: white;
 }
 
-label[for="currency"] i.fa-arrow-down{
+label[for="currency"] i.fa-caret-down{
     position:relative;
     display: block;
-    color: black;
     left: 220px;
+    font-size: 20px;
+    color: white;
 }
 
 
