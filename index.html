@@ -25,6 +25,8 @@
     Your browser does not support the video tag.
 </video>
 
+
+<div class="container">
 <header class="row">
     <div class="col-12 text-center">
         <img class="logo" src="static/images/bitcoin-thumbnail.png" alt="an imaage of a physical bitcoin">
@@ -35,35 +37,42 @@
 
 <!--Cryptocurrency Selection-->
 <form action="/" method="post">
-    <div class="row text-center">
-        <div class="col-12">
-            <label for="crypto"><i class="fa fa-caret-down"></i></label>
+    <div class="row">
+        <div class="col-4">
+            <div class="select-box">
             <select id="crypto" name="crypto">
                 <option value="BTC">Bitcoin</option>
                 <option value="ETC">Etherum</option>
                 <option value="LTC">Lite Coin</option>
                 <option value="XRP">Ripple</option>
             </select>
-
+            </div>
+        </div>
 
             <!--Currency Selection-->
-
-            <label for="currency"><i class="fa fa-caret-down"></i></label>
+        <div class="col-4">
+            <div class="select-box">
             <select id="currency" name="currency">
-                <option value="MKD">Macedonian Denar</option>
-                <option value="EUR">Euro</option>
-                <option value="USD">US Dollar</option>
-                <option value="GBP">British Pound</option>
+                <option value="MKD">MKD</option>
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
             </select>
+            </div>
+        </div>
+
+        <div class="col-4">
             <input type="number" name="amount" placeholder="Amount" required>
         </div>
 
-        <div class="col-12">
-            <button class="btn btn-primary" type="submit">Submit</button>
+        <div class="row">
+        <div class="col">
+            <button class="btn btn-md btn-primary" type="submit">Submit</button>
         </div>
     </div>
+    </div>
 </form>
-
+</div>
 
 <!--Bootstrap Javascript Dependencies-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -72,6 +81,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
-
 </body>
 </html>
