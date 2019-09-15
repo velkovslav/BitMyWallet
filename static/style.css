@@ -21,7 +21,7 @@ header h1 span {
     position: relative;
 }
 
-.select-box select, input {
+.select-box select, input, button {
     font-size: 28px;
     text-transform: uppercase;
     background-color: rgba(0, 0, 0, 0.37);
@@ -36,6 +36,7 @@ header h1 span {
     width: 100%;
     text-align: center;
 }
+
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -70,5 +71,4 @@ input[type=number]::-webkit-outer-spin-button {
 .row:first-child div {
     margin: 0 0 20px;
 }
-
 
