@@ -1,7 +1,7 @@
 body {
     background-color: #65d38c;
     color: white;
-    font-family: "Roboto Light", "FontAwesome",sans-serif, serif;
+    font-family: "Roboto", "FontAwesome",sans-serif, serif;
 }
 
 header {
@@ -72,3 +72,14 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0 0 20px;
 }
 
+.conversion-result {
+    color: white;
+    font-size: 78px;
+    padding: 20px 0;
+    letter-spacing: 20px;
+    font-weight: 900;
+}
+
+.conversion-result span{
+font-weight: 100;
+}
