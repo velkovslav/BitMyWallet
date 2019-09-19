@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>BitMyWallet -Cryptocurrency Converter</title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,400i,700,900&display=swap&subset=cyrillic,cyrillic-ext"
+          rel="stylesheet">
+    <!--Font Awesome-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--Local Bootstrap Stylesheet-->
+    <link href="../static/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!--Custom Style Stylesheet-->
+    <link href="/static/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+<!--Background Video-->
+<video autoplay id="myVideo" loop>
+    <source src="static/video/bitcoin.mp4" type="video/mp4">
+    <!--    <source src="movie.ogg" type="video/ogg">-->
+    Your browser does not support the video tag.
+</video>
+
+
+<div class="container">
+    <header class="row">
+        <div class="col-12 text-center">
+            <img alt="an imaage of a physical bitcoin" class="logo" src="../static/images/bitcoin-thumbnail.png">
+            <h1><span>Bit</span> | MyWallet</h1>
+            <p>Check the value of your desired cryptocurrency</p>
+        </div>
+    </header>
+
+    <!--Form-->
+    <form action="/" method="post">
+        <div class="row">
+            <!--Crypto Select Box-->
+            <div class="col-lg-4">
+                <div class="select-box">
+                    <select id="crypto" name="crypto">
+                        <option value="BTC">Bitcoin</option>
+                        <option value="ETC">Etherum</option>
+                        <option value="LTC">Lite Coin</option>
+                        <option value="XRP">Ripple</option>
+                    </select>
+                </div>
+            </div>
+            <!--Fiat Select Box-->
+            <div class="col-lg-4">
+                <div class="select-box">
+                    <select id="currency" name="currency">
+                        <option value="MKD">MKD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="USD">USD</option>
+                        <option value="GBP">GBP</option>
+                    </select>
+                </div>
+            </div>
+            <!--Amount Input Field-->
+            <div class="col-lg-4">
+                <input name="amount" onblur="this.placeholder = 'Amount'" onfocus="this.placeholder = ''" placeholder="Amount"
+                       required type="number">
+            </div>
+        </div>
+        <!--Submit Button-->
+        <div class="row">
+            <div class="col-12">
+                <button class="submit-button" type="submit">Submit</button>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-12">
+            <p class="conversion-result"><%= Math.round(foo) %> <span>|MKD</span></p>
+            </div>
+        </div>
+        <!--Cryptocurrency Description-->
+        <div id="crypto-description" class="row">
+            <div class="col-7">
+                <p>Short Description</p>
+                <p>Bitcoin is a cryptocurrency. It is a decentralized digital currency without a central bank or single administrator that can be sent from user to user on the peer-to-peer bitcoin network without the need for intermediaries...</p>
+            </div>
+        </div>
+
+        <!--Cryptocurrency Table-->
+        <div class="row">
+            <div class="col-12">
+                <table>
+                    <tr>
+                        <th>Day</th>
+                        <th>Week</th>
+                        <th>Month</th>
+                        <th>Year</th>
+                    </tr>
+                    <tr>
+                        <td>1254</td>
+                        <td>2356</td>
+                        <td>8745</td>
+                        <td>3256</td>
+                    </tr>
+                    <tr>
+                        <td>1254</td>
+                        <td>2356</td>
+                        <td>8745</td>
+                        <td>3256</td>
+                    </tr>
+                    <tr>
+                        <td>1254</td>
+                        <td>2356</td>
+                        <td>8745</td>
+                        <td>3256</td>
+                    </tr>
+                    <tr>
+                        <td>1254</td>
+                        <td>2356</td>
+                        <td>8745</td>
+                        <td>3256</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<!--Bootstrap Javascript Dependencies-->
+<script crossorigin="anonymous"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+</body>
+</html>

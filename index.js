@@ -1,4 +1,5 @@
 // Packages
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const request = require('request');
@@ -8,12 +9,15 @@ const ejs = require('ejs');
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.set('view engine', 'ejs');
+// Get the root index.html file
+app.get('/', (req, res) => {
+    price = NaN;
+    res.render('index', {foo: price});
+});
 // Connect with the static files
 app.use('/static',express.static(__dirname + "/static"));
-// Get the root index.html file
-app.get("/", function(req,res){
-    res.sendFile(__dirname + "/index.html");
-});
+
 
 // Get the variables form the converter form
 app.post("/",function(req,res) {
@@ -36,13 +40,18 @@ app.post("/",function(req,res) {
         var time = data.time;
         var price = data.price;
         var priceWithDecimal = Math.round(price);
-        console.log(data);
-        res.send('The conversion rate is ' + price + ' ' + currency + ' ' + time);
-    })
+        res.render('index', {foo: price});
+    });
+
+
+
+
+
 });
 
-// Start the server
 
+
+// Start the server
 app.listen(3000, function(){
    console.log('The server is working on port 3000');
 });
