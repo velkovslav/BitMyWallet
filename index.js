@@ -8,15 +8,22 @@ const ejs = require('ejs');
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
-
 app.set('view engine', 'ejs');
+
+
+// Connect with the static files directory
+app.use('/static',express.static(__dirname + "/static"));
+
+// General variables
+var convertionResult = 0;
+var currentCurrency = "";
+
+
 // Get the root index.html file
 app.get('/', (req, res) => {
-    price = NaN;
-    res.render('index', {foo: price});
+    res.render('index', {conversionResult: convertionResult,currentCurrency: currentCurrency});
 });
-// Connect with the static files
-app.use('/static',express.static(__dirname + "/static"));
+
 
 
 // Get the variables form the converter form
@@ -39,13 +46,11 @@ app.post("/",function(req,res) {
         var data = JSON.parse(body);
         var time = data.time;
         var price = data.price;
-        var priceWithDecimal = Math.round(price);
-        res.render('index', {foo: price});
+
+        var convertionResult = Math.round(price);
+        var currentCurrency = currency;
+        res.render('index', {conversionResult: convertionResult,currentCurrency: currentCurrency});
     });
-
-
-
-
 
 });
 
