@@ -21,7 +21,10 @@ currentCurrency = "";
 
 // Get the root index.html file
 app.get('/', (req, res) => {
-    res.render('index', {conversionResult: convertionResult,currentCurrency: currentCurrency});
+    res.render('index', {
+        conversionResult: convertionResult,
+        currentCurrency: currentCurrency
+    });
 });
 
 
