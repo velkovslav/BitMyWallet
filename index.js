@@ -15,8 +15,8 @@ app.set('view engine', 'ejs');
 app.use('/static',express.static(__dirname + "/static"));
 
 // General variables
-var convertionResult = 0;
-var currentCurrency = "";
+convertionResult = 0;
+currentCurrency = "";
 
 
 // Get the root index.html file
@@ -47,9 +47,10 @@ app.post("/",function(req,res) {
         var time = data.time;
         var price = data.price;
 
-        var convertionResult = Math.round(price);
-        var currentCurrency = currency;
-        res.render('index', {conversionResult: convertionResult,currentCurrency: currentCurrency});
+        convertionResult = Math.round(price);
+        currentCurrency = currency;
+        res.redirect("/");
+        // res.render('index', {conversionResult: convertionResult,currentCurrency: currentCurrency});
     });
 
 });
