@@ -15,6 +15,7 @@
     <link href="../static/bootstrap/css/bootstrap.css" rel="stylesheet">
     <!--Custom Style Stylesheet-->
     <link href="/static/style.css" rel="stylesheet">
+
     <title>Document</title>
 </head>
 <body>
@@ -75,7 +76,7 @@
 
         <div class="row text-center">
             <div class="col-12">
-            <p class="conversion-result"><%= Math.round(conversionResult) %> <span>|<%= currentCurrency %></span></p>
+            <p class="conversion-result js-bounty"></p>
             </div>
         </div>
 
@@ -87,8 +88,7 @@
                 <p>Bitcoin is a cryptocurrency. It is a decentralized digital currency without a central bank or single administrator that can be sent from user to user on the peer-to-peer bitcoin network without the need for intermediaries...</p>
             </div>
         </div>
-
-        <!--Cryptocurrency Table-->
+                <!--Cryptocurrency Table-->
         <div class="row">
             <div class="col-12">
                 <table>
@@ -127,7 +127,21 @@
         </div>
 
     </form>
+    <div class="row">
+        <div class="col-12">
+            <div class="js-bounty"></div>
+
+        </div>
+    </div>
+
 </div>
+
+
+<!--Slot Machine Effect Javascript-->
+<script src="https://unpkg.com/bounty@1.1.6/lib/bounty.js"></script>
+<script>
+    bounty.default({ el: '.js-bounty', value: '<%= convertionResult  + '|' + currentCurrency%> ' });
+</script>
 
 <!--Bootstrap Javascript Dependencies-->
 <script crossorigin="anonymous"
