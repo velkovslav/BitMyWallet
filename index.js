@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 // Connect with the static files directory
 app.use('/static',express.static(__dirname + "/static"));
 
-// General variables
+//Global Variables
 convertionResult = 0;
 currentCurrency = "";
 
