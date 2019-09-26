@@ -31,11 +31,11 @@ app.get('/', (req, res) => {
 
 // Get the variables form the converter form
 app.post("/",function(req,res) {
-    var crypto = req.body.crypto; //Example output BTC
-    var currency = req.body.currency; //Example output USD
-    var amount = req.body.amount;
+    let crypto = req.body.crypto; //Example output BTC
+    let currency = req.body.currency; //Example output USD
+    let amount = req.body.amount;
 
-    var options = {
+    let options = {
         url: 'https://apiv2.bitcoinaverage.com/convert/global',
         method: 'GET',
         qs: {
@@ -46,9 +46,9 @@ app.post("/",function(req,res) {
     };
 
     request(options, function (error, respond, body) {
-        var data = JSON.parse(body);
-        var time = data.time;
-        var price = data.price;
+        let data = JSON.parse(body);
+        let time = data.time;
+        let price = data.price;
 
         convertionResult = Math.round(price);
         currentCurrency = currency;
