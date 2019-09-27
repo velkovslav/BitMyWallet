@@ -108,3 +108,7 @@ table {
 table td {
     padding: 5px 0;
 }
+
+.swap-button {
+    padding: 0;
+}
