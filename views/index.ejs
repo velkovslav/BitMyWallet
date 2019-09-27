@@ -63,7 +63,8 @@
             </div>
             <!--Amount Input Field-->
             <div class="col-lg-4">
-                <input name="amount" onblur="this.placeholder = 'Amount'" onfocus="this.placeholder = ''" placeholder="Amount"
+                <input name="amount" onblur="this.placeholder = 'Amount'" onfocus="this.placeholder = ''"
+                       placeholder="Amount"
                        required type="number">
             </div>
         </div>
@@ -76,7 +77,7 @@
 
         <div class="row text-center">
             <div class="col-12">
-            <p class="conversion-result js-bounty"></p>
+                <p class="conversion-result js-bounty"></p>
             </div>
         </div>
 
@@ -85,10 +86,12 @@
         <div id="crypto-description" class="row">
             <div class="col-7">
                 <p>Short Description</p>
-                <p>Bitcoin is a cryptocurrency. It is a decentralized digital currency without a central bank or single administrator that can be sent from user to user on the peer-to-peer bitcoin network without the need for intermediaries...</p>
+                <p>Bitcoin is a cryptocurrency. It is a decentralized digital currency without a central bank or single
+                    administrator that can be sent from user to user on the peer-to-peer bitcoin network without the
+                    need for intermediaries...</p>
             </div>
         </div>
-                <!--Cryptocurrency Table-->
+        <!--Cryptocurrency Table-->
         <div class="row">
             <div class="col-12">
                 <table>
@@ -137,35 +140,23 @@
 </div>
 
 
-
 <!--Slot Machine Effect Javascript-->
 <script src="https://unpkg.com/bounty@1.1.6/lib/bounty.js"></script>
 <script>
-    bounty.default({ el: '.js-bounty', value: '<%= convertionResult  + '|' + currentCurrency%> ' });
+    bounty.default({el: '.js-bounty', value: '<%= convertionResult + '|' + currentCurrency %> '});
 </script>
 
 <script>
     var cryptoOptions = document.getElementById('currency').children;
-    // var currencyOptions = document.getElementById('currency').children;
-    // console.log(cryptoOptions[0].value);
-    // console.log(cryptoOptions[1].value);
-    // console.log(cryptoOptions[2].value);
-    // console.log(cryptoOptions[3].value);
-    // console.log(cryptoOptions.length);
-    // for(var index in cryptoOptions) {
-    //     console.log(index);
-    //     console.log(cryptoOptions[index]['value']);
-    // }
-    for (let i = 0; i <= cryptoOptions.length; i++) {
-        // console.log(cryptoOptions[i]['value']);
-            if (cryptoOptions[i]['value'] === '<%= currentCurrency%>') {
-                cryptoOptions[i].setAttribute("selected", "");
-                console.log("bide")
-                break;
-            } else {
-                console.log('there is a fucking problem')
-            }
 
+    for (let i = 0; i <= cryptoOptions.length; i++) {
+        if (cryptoOptions[i]['value'] === '<%= currentCurrency %>') {
+            cryptoOptions[i].setAttribute("selected", "");
+            console.log("bide")
+            break;
+        } else {
+            console.log('there is a fucking problem')
+        }
     }
 
 
