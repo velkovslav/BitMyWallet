@@ -5,6 +5,8 @@ const bodyParser = require('body-parser');
 const request = require('request');
 const ejs = require('ejs');
 // End of Packages
+let scratch = require('./scratch.js');
+
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
@@ -30,33 +32,7 @@ app.get('/', (req, res) => {
 
 
 // Get the variables form the converter form
-app.post("/",function(req,res) {
-    let crypto = req.body.crypto; //Example output BTC
-    let currency = req.body.currency; //Example output USD
-    let amount = req.body.amount;
-
-    let options = {
-        url: 'https://apiv2.bitcoinaverage.com/convert/global',
-        method: 'GET',
-        qs: {
-            from: crypto,
-            to: currency,
-            amount: amount,
-        }
-    };
-
-    request(options, function (error, respond, body) {
-        let data = JSON.parse(body);
-        let time = data.time;
-        let price = data.price;
-
-        convertionResult = Math.round(price);
-        currentCurrency = currency;
-        res.redirect("/");
-        // res.render('index', {conversionResult: convertionResult,currentCurrency: currentCurrency});
-    });
-
-});
+app.post("/",scratch);
 
 
 
