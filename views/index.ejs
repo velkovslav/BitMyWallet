@@ -54,7 +54,7 @@
             <!--Swap Currencies-->
             <div class="col-lg-1">
 <!--                <button class="swap-button"><i class="fa fa-arrow-right"></i></button>-->
-                <input class="swap-button" type="checkbox" checked="checked" aria-checked="true">
+                <input class="swap-button" type="checkbox" checked="checked" aria-checked="true" name="toFiat">
 
             </div>
 
@@ -160,7 +160,6 @@
     for (let i = 0; i <= cryptoOptions.length; i++) {
         if (cryptoOptions[i]['value'] === '<%= currentCurrency %>') {
             cryptoOptions[i].setAttribute("selected", "");
-            console.log("bide")
             break;
         } else {
             console.log('there is a fucking problem')
@@ -168,6 +167,24 @@
     }
 
 
+</script>
+
+<script>
+    let swapButton = document.querySelector('.swap-button');
+
+
+    swapButton.addEventListener('click', function() {
+        let swapButtonCheckState = swapButton.getAttribute('name');
+
+        if (swapButtonCheckState === "toFiat") {
+            swapButton.setAttribute('name','toCrypto')
+        }
+
+        else if (swapButtonCheckState === "toCrypto"){
+            swapButton.setAttribute('name','toFiat')
+        }
+
+    })
 </script>
 <!--Bootstrap Javascript Dependencies-->
 <script crossorigin="anonymous"
